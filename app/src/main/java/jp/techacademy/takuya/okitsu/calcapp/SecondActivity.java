@@ -23,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.textView);
 
+
         textView.setText(String.valueOf(value01 + value02));
 
 

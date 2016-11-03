@@ -37,8 +37,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
         Intent intent = new Intent(this,SecondActivity.class);
 
-        intent.putExtra("VALUE1",text1.getText().toString());
-        intent.putExtra("VALUE2",text2.getText().toString());
-        startActivity(intent);
+        EditText value01 = (EditText) findViewById(R.id.text1);
+        EditText value02 = (EditText) findViewById(R.id.text2);
+        double value03 = 0;
+        switch(v.getId()){
+            case R.id.button1:
+                try{
+                    intent.putExtra("VALUE1",text1.getText().toString());
+                    intent.putExtra("VALUE2",text2.getText().toString());
+                    value03 = value01 + value02;
+                    startActivity(intent);
+                }catch (Exception e)
+                {
+                    SecondActivity.textView.setText("数値が間違っています。");
+                }
+                break;
+            case R.id.button2:
+                try{
+                    intent.putExtra("VALUE1",text1.getText().toString());
+                    intent.putExtra("VALUE2",text2.getText().toString());
+                    value03 = value01 - value02;
+                    startActivity(intent);
+                }catch (Exception e)
+                {
+                    SecondActivity.textView.setText("数値が間違っています。");
+                }
+                break;
+            case R.id.button3:
+                try{
+                    intent.putExtra("VALUE1",text1.getText().toString());
+                    intent.putExtra("VALUE2",text2.getText().toString());
+                    value03 = value01 * value02;
+                    startActivity(intent);
+                }catch (Exception e)
+                {
+                    SecondActivity.textView.setText("数値が間違っています。");
+                }
+                break;
+            case R.id.button4:
+                try{
+                    intent.putExtra("VALUE1",text1.getText().toString());
+                    intent.putExtra("VALUE2",text2.getText().toString());
+                    value03 = value01 / value02;
+                    startActivity(intent);
+                }catch (Exception e)
+                {
+                    SecondActivity.textView.setText("数値が間違っています。");
+                }
+                break;
+
+        }
+
+
     }
 }
