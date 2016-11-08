@@ -15,16 +15,19 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        String value1 = intent.getStringExtra("VALUE1");
-        String value2 = intent.getStringExtra("VALUE2");
+        //String value1 = intent.getStringExtra("VALUE1");
+        //String value2 = intent.getStringExtra("VALUE2");
+        String value3 = intent.getStringExtra("VALUE3");
 
-        int value01 = Integer.parseInt(value1);
-        int value02 = Integer.parseInt(value2);
+       // int value01 = Integer.parseInt(value1);
+       // int value02 = Integer.parseInt(value2);
+
+        double value03 = Double.valueOf(value3);
 
         TextView textView = (TextView) findViewById(R.id.textView);
 
 
-        textView.setText(String.valueOf(value01 + value02));
+        textView.setText(String.valueOf(value03));
 
 
     }
