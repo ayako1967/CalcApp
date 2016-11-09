@@ -49,8 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()){
             case R.id.button1:
                 try{
-                    intent.putExtra("VALUE1",value01);
-                    intent.putExtra("VALUE2",value02);
+
                     double value03 = value01 + value02;
                     intent.putExtra("VALUE3",value03);
 
@@ -65,8 +64,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button2:
                 try{
-                    intent.putExtra("VALUE1",value01);
+                   /* intent.putExtra("VALUE1",value01);
                     intent.putExtra("VALUE2",value02);
+                    */
                     double value03 = value01 - value02;
                     intent.putExtra("VALUE3",value03);
 
@@ -81,8 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button3:
                 try{
-                    intent.putExtra("VALUE1",value01);
+                 /*   intent.putExtra("VALUE1",value01);
                     intent.putExtra("VALUE2",value02);
+                    */
                     double value03 = value01 * value02;
                     intent.putExtra("VALUE3",value03);
 
@@ -97,8 +98,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button4:
                 try{
-                    intent.putExtra("VALUE1",value01);
+                /*    intent.putExtra("VALUE1",value01);
                     intent.putExtra("VALUE2",value02);
+                    */
                     double value03 = value01 / value02;
                     intent.putExtra("VALUE3",value03);
 
