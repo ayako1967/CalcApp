@@ -42,79 +42,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText value1 = (EditText) findViewById(R.id.text1);
         EditText value2 = (EditText) findViewById(R.id.text2);
 
-        //String value01 = Integer.parseInt(value1);
-        double value01 = Double.valueOf(value1.getText().toString());
-        double value02 = Double.valueOf(value2.getText().toString());
+        try{
 
-        switch(v.getId()){
-            case R.id.button1:
-                try{
-
+            double value01 = Double.valueOf(value1.getText().toString());
+            double value02 = Double.valueOf(value2.getText().toString());
+            switch(v.getId()){
+                case R.id.button1:
                     double value03 = value01 + value02;
                     intent.putExtra("VALUE3",value03);
+                    break;
+                case R.id.button2:
+                    double value04 = value01 - value02;
+                    intent.putExtra("VALUE3",value04);
+                    break;
+                case R.id.button3:
+                    double value05 = value01 * value02;
+                    intent.putExtra("VALUE3",value05);
+                    break;
+                default:
+                    double value06 = value01 / value02;
+                    intent.putExtra("VALUE3",value06);
 
-                    startActivity(intent);
-                }catch (Exception ex)
-                {
-                    //textView.setText("数値が間違っています。");
-                    Toast.makeText(this, "数字が未入力です", Toast.LENGTH_SHORT).show();
+            }
+            startActivity(intent);
+        }catch (Exception ex)
+        {
+            //textView.setText("数値が間違っています。");
+            Toast.makeText(this, "数字が未入力です", Toast.LENGTH_SHORT).show();
 
-                    ex.printStackTrace();
-                }
-                break;
-            case R.id.button2:
-                try{
-                   /* intent.putExtra("VALUE1",value01);
-                    intent.putExtra("VALUE2",value02);
-                    */
-                    double value03 = value01 - value02;
-                    intent.putExtra("VALUE3",value03);
-
-                    startActivity(intent);
-                }catch (Exception ex)
-                {
-                    //textView.setText("数値が間違っています。");
-                    Toast.makeText(this, "数字が未入力です", Toast.LENGTH_SHORT).show();
-
-                    ex.printStackTrace();
-                }
-                break;
-            case R.id.button3:
-                try{
-                 /*   intent.putExtra("VALUE1",value01);
-                    intent.putExtra("VALUE2",value02);
-                    */
-                    double value03 = value01 * value02;
-                    intent.putExtra("VALUE3",value03);
-
-                    startActivity(intent);
-                }catch (Exception ex)
-                {
-                    //textView.setText("数値が間違っています。");
-                    Toast.makeText(this, "数字が未入力です", Toast.LENGTH_SHORT).show();
-
-                    ex.printStackTrace();
-                }
-                break;
-            case R.id.button4:
-                try{
-                /*    intent.putExtra("VALUE1",value01);
-                    intent.putExtra("VALUE2",value02);
-                    */
-                    double value03 = value01 / value02;
-                    intent.putExtra("VALUE3",value03);
-
-                    startActivity(intent);
-                }catch (Exception ex)
-                {
-                    //textView.setText("数値が間違っています。");
-                    Toast.makeText(this, "数字が未入力です", Toast.LENGTH_SHORT).show();
-
-                    ex.printStackTrace();
-                }
-                break;
-
+            ex.printStackTrace();
         }
+
+
+
 
 
     }
